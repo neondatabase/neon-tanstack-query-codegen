@@ -1,0 +1,40 @@
+{
+  "name": "neon-schema-gen",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "generate:types": "bun src/sql-to-types/postgres.ts",
+    "generate:code": "bun src/types-to-code/generate.ts",
+    "generate:full": "bun run generate:types && bun run generate:code"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/pluralize": "^0.0.29",
+    "@types/yargs": "^17.0.24",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-security-node": "^1.1.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "lint-staged": "^13.2.1",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@rmp135/sql-ts": "^2.1.0",
+    "@tanstack/react-query": "^5.55.4",
+    "pg": "^8.12.0",
+    "pluralize": "^8.0.0",
+    "prettier": "^2.8.8",
+    "ts-morph": "^18.0.0",
+    "yargs": "^17.7.2"
+  }
+}
